@@ -26,7 +26,6 @@ public class Run {
         print(UEBytes);
 
 
-
         System.out.println("\n\n\n---mix---");
         byte[] mixBytes = new UTF8BytesMix(Serializer.serialize(gadget)).builder();
         print(mixBytes);
@@ -34,11 +33,12 @@ public class Run {
     }
 
 
-    public static void print(byte[] bytes ){
+    public static void print(byte[] bytes) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         for (byte b : bytes) {
             out.write(b);
         }
+        System.out.println("byte length:" + bytes.length);
         System.out.println(out);
     }
 }
